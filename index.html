@@ -19,6 +19,33 @@
             <textarea id="textarea" cols="30" rows="1" placeholder="Message"></textarea>
         </div>
     </section>
+     <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
+        // Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCEFsQZe6cf-w9wqWt2pzj4fFelpqfKu5I",
+            authDomain: "me-chat-cf86c.firebaseapp.com",
+            databaseURL: "https://me-chat-cf86c-default-rtdb.firebaseio.com",
+            projectId: "me-chat-cf86c",
+            storageBucket: "me-chat-cf86c.appspot.com",
+            messagingSenderId: "175430461987",
+            appId: "1:175430461987:web:91497735fa573e1f275f96",
+            measurementId: "G-WVM2HYRKF8"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+            export const db = getFirestore(app);
+            export const auth = getAuth(app);
+            export const provider = new GoogleAuthProvider()
+    </script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
 </body>
